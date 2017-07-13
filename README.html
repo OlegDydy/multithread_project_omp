@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>results</title>
+    <link rel="stylesheet" type="text/css" href="redist/result.css">
+    <meta charset = "utf-8">
+  </head>
+  <body>
+<h1>Парметры консоли:</h1>
+<table>
+<tr><td>-h, -help</td><td>Вывод внутренней справки</td></tr>
+<tr><td>-count &lt;n&gt;</td><td>Размер теста. Для первой порядка миллиона, для второй около 64 так как задает порядок квадратной матрицы</td></tr>
+<tr><td>-steps &lt;n&gt;</td><td>Количетво шагов  хватить примерно 30</td></tr>
+<tr><td>-average &lt;n&gt;</td><td>Количество циклов усреднения (чем больше тем более гладким должен быть график)</td></tr>
+<tr><td>-threads &lt;n&gt;</td><td>Колчество потоков (по умолчанию выставляется по количеству потоков выполнения)</td></tr>
+<tr><td>-ln</td><td>Экспоненциалный шаг для отобрадения на логарифмиеской шкале</td></tr>
+<tr><td>-silent</td><td>Отключение вывода только процент выполнения</td></tr>
+<tr><td>-graph</td><td>Построение графика</td></tr>
+</table>
+<br>
+<h1>Примеры тестов:</h1>
+<table>
+<tr><td>График показывающий эффективность мультипоточности<br><br>
+App_1.exe -count 1048576 -steps 32 -average 32 -ln -silent -graph<br>
+App_2.exe -count 64 -steps 32 -average 32 -ln -silent -graph
+</td></tr>
+<tr><td>Посмотреть как количество потоков влияет на проиводительность<br>
+n можно взять 4/6/8/10/16/32<br><br>
+App_1.exe -count 1048576 -threads &lt;n&gt;<br>
+App_2.exe -count 64 -threads &lt;n&gt;
+</td></tr>
+</table>
+  </body>
+</html>

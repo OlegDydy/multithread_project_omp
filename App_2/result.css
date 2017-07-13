@@ -1,0 +1,25 @@
+﻿table {
+	border:1px solid black;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+table td {
+	border:1px solid black;
+	padding:2pt;
+}
+
+.caption{
+	text-align:center
+}
+
+.cpu_caption{
+	width:400px;
+	text-align:center;
+	height:20pt;
+}
+
+.par_name{
+	width:1pt;
+	height:1pt;
+}
